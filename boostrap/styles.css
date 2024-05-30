@@ -1,0 +1,87 @@
+body {
+    background-color:#3a4077 ;
+}
+.carousel-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.navbar-custom {
+    background-color: #000!important;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler-icon,
+.navbar-custom .btn-outline-success {
+    color: #fff !important;
+}
+.navbar-custom .btn-outline-success:hover {
+    color: #000!important;
+    background-color: #fff!important;
+    border-color: #fff!important;
+}
+footer.custom-footer {
+    background-color: #000 !important;
+    color: #fff !important;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer.custom-footer p {
+    color: #fff !important;
+}
+
+footer.custom-footer .nav-link {
+    color: #fff !important;
+}
+
+@media (max-width: 576px) {
+    .carousel-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: 45%; /* Se hace más pequeña la carta */
+    margin-bottom: 20px; /* Espacio entre las cartas */
+  }
+  
+  .card-img-top {
+    width: 100%; /* Ajusta la imagen al ancho de la carta */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 100%; /* Para que ocupe toda la anchura en dispositivos móviles */
+    }
+  }
+
+  .custom-footer {
+    background-color: #000000; /* Negro */
+    color: #ffffff; /* Blanco */
+}
+.container {
+    padding-left: 15px; /* Relleno izquierdo */
+    padding-right: 15px; /* Relleno derecho */
+}
+
+.form-check-label {
+    padding-right: 15px; /* Relleno derecho para las etiquetas de formulario */
+}
+
+.custom-footer {
+    background-color: black;
+    color: white;
+}
+/* Estilo adicional */
+.card {
+    margin-bottom: 20px;
+}
