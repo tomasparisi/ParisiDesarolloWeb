@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="submit"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+            input[type="text"],
+            input[type="date"],
+            input[type="submit"] {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function calcularDiasVividos(fechaNacimiento) {
+            const hoy = new Date();
+            const nacimiento = new Date(fechaNacimiento);
+            const diferenciaMilisegundos = hoy - nacimiento;
+            const diasVividos = Math.floor(diferenciaMilisegundos / (1000 * 60 * 60 * 24));
+            return diasVividos;
+        }
+
+        function mostrarMensaje() {
+            const nombre = document.getElementById('nombre').value;
+            const ciudad = document.getElementById('ciudad').value;
+            const fechaNacimiento = document.getElementById('fechaNacimiento').value;
+
+            const diasVividos = calcularDiasVividos(fechaNacimiento);
+
+            alert(`¡Bienvenido, ${nombre} de ${ciudad}!`);
+            alert(`Has vivido aproximadamente ${diasVividos} días.`);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Introduce tus datos</h1>
+        <form onsubmit="mostrarMensaje(); return false;">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required><br>
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+</body>
+</html>
