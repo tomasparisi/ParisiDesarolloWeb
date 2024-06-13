@@ -82,12 +82,19 @@ footer {
     bottom: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
         align-items: center;
     }
-
+    img {
+        width: 90%;
+    }
     nav ul li {
         margin: 10px 0;
     }
