@@ -1,0 +1,42 @@
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    color: #000; 
+  }
+  
+  .modo-oscuro {
+    background-color: #282c34; 
+    color: #fff; 
+  }
+  
+  .modo-oscuro .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5); 
+  }
+  .modo-oscuro td {
+    color: #fff;
+  }
+  
+  .modo-oscuro .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.75); 
+  }
+  
+  .table th, .table td {
+    border-color: #dee2e6; 
+  }
+  
+  .table thead th {
+    background-color: #343a40; 
+    color: #fff; 
+  }
+  
+  .imagen-centrada {
+    text-align: center; 
+    margin-top: 20px; 
+  }
+  
+  .imagen-centrada img {
+    max-width: 100%; 
+    height: auto; 
+    display: inline-block; 
+  }
+  
